@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Smartceo_OnlinePaymentNotification>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Smartceo_OnlinePaymentNotification>
+	</modules>
+</config>

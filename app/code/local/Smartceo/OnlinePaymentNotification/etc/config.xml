@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Smartceo_OnlinePaymentNotification>
+            <version>1.0</version>
+        </Smartceo_OnlinePaymentNotification>
+    </modules>
+    <global>
+        <models>            
+            <smartceo_onile_payment_hook>
+                <class>Smartceo_OnlinePaymentNotification_Model</class>
+            </smartceo_onile_payment_hook>
+        </models>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <smartceo_onile_payment_notify>
+                        <type>singleton</type>
+                        <class>Smartceo_OnlinePaymentNotification_Model_Observer</class>
+                        <method>implementOrderStatus</method>
+                    </smartceo_onile_payment_notify>
+                </observers>
+            </sales_order_place_after>
+        </events>
+    </global>
+</config>
+
